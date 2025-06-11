@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner s = new Scanner(System.in);
+    int r = s.nextInt();
+    int c = s.nextInt();
+    int arr[][] = new int[r][c];
+    for(int i=0; i<r; i++){
+      for(int j=0; j<c; j++){
+        arr[i][j] = s.nextInt();
+      }
+    }
+    int left = 0, right = c-1, top = 0, bottom = r-1;
+    while(top<=bottom && left <= right){
+      for(int i=left; i<=right; i++){
+        System.out.print(arr[top][i]+" ");
+      }
+      top++;
+      
+      for(int j=top; j<=bottom; j++){
+        System.out.print(arr[j][right]+" ");
+      }
+      right--;
+      if(top<=bottom){
+        for(int i=right; i>=left; i--){
+          System.out.print(arr[bottom][i]+" ");
+        }
+        bottom--;
+      }
+      if(left<=right){
+        for(int j=bottom; j>=top; j--){
+          System.out.print(arr[j][left]+" ");
+        }
+        left++;
+      }
+    }
+  }
+}
