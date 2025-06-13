@@ -10,28 +10,6 @@ Sample output:
 
 
 import java.util.*;
-public class Main{
-  public static void main(String args[]){
-    Scanner s = new Scanner(System.in);
-    LinkedList l1 = new LinkedList();
-    int n = s.nextInt();
-    for(int i=0; i<n; i++){
-      int num = s.nextInt();
-      l1.create(num);
-    }
-    int n1 = s.nextInt();
-    l1.insertAtMiddle(n1,n);
-    l1.display();
-  }
-}
-class Node{
-  int data;
-  Node next;
-  Node(int val){
-    this.data = val;
-    this.next = null;
-  }
-}
 class LinkedList{
     Node head = null, current = null;
     void create(int n){
@@ -68,4 +46,26 @@ class LinkedList{
         current = current.next;
       }
     }
+public class Main{
+  public static void main(String args[]){
+    Scanner s = new Scanner(System.in);
+    LinkedList l1 = new LinkedList();
+    int n = s.nextInt();
+    for(int i=0; i<n; i++){
+      int num = s.nextInt();
+      l1.create(num);
+    }
+    int n1 = s.nextInt();
+    l1.insertAtMiddle(n1,n);
+    l1.display();
+  }
+}
+class Node{
+  int data;
+  Node next;
+  Node(int val){
+    this.data = val;
+    this.next = null;
+  }
+}
 }
