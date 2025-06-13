@@ -10,6 +10,14 @@ Sample output:
 
 
 import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int val){
+    this.data = val;
+    this.next = null;
+  }
+}
 class LinkedList{
     Node head = null, current = null;
     void create(int n){
@@ -58,14 +66,6 @@ public class Main{
     int n1 = s.nextInt();
     l1.insertAtMiddle(n1,n);
     l1.display();
-  }
-}
-class Node{
-  int data;
-  Node next;
-  Node(int val){
-    this.data = val;
-    this.next = null;
   }
 }
 }
