@@ -45,6 +45,13 @@ public class Main{
           }
         }
       }
+      // else if(arr[0].equals("FRONT")){
+      //   if(q1.isEmpty())
+      //     System.out.println("Queue is Empty");
+      //   else{
+      //     System.out.println(q1.peek());
+      //   }
+      // }
     }
   }
 }
